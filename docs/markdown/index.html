@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Panduan Menulis Markdown · Juklak User</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="`Anda berada di dalam panduan: Markdown`"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Panduan Menulis Markdown · Juklak User"/><meta property="og:type" content="website"/><meta property="og:url" content="https://faizadi.github.io/wika-guide/"/><meta property="og:description" content="`Anda berada di dalam panduan: Markdown`"/><meta property="og:image" content="https://faizadi.github.io/wika-guide/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://faizadi.github.io/wika-guide/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/wika-guide/img/wika_logo_square.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><link rel="alternate" type="application/atom+xml" href="https://faizadi.github.io/wika-guide/blog/atom.xml" title="Juklak User Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://faizadi.github.io/wika-guide/blog/feed.xml" title="Juklak User Blog RSS Feed"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/wika-guide/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/wika-guide/js/scrollSpy.js"></script><link rel="stylesheet" href="/wika-guide/css/main.css"/><script src="/wika-guide/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/wika-guide/"><img class="logo" src="/wika-guide/img/wika_logo_white.png" alt="Juklak User"/><h2 class="headerTitleWithLogo">Juklak User</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/wika-guide/docs/toc" target="_self">Dokumen</a></li><li class=""><a href="/wika-guide/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>BSI Playground</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">BSI Playground</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/wika-guide/docs/markdown">Panduan Menulis Markdown</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/faizadi/wika-guide/edit/master/docs/markdown.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Panduan Menulis Markdown</h1></header><article><div><span><p><code>Anda berada di dalam panduan: Markdown</code></p>
+<p><img src="assets/undraw_teacher_35j2.svg" alt="gbr-ilustrasi-1" width="500"/></p>
+<p>Secara umum, inilah detil teknis yang dapat kalian lakukan dengan Markdown:</p>
+<ul>
+<li><a href="#menulis-judul-header"><code>Menulis Judul Header</code></a></li>
+<li><a href="#menulis-teks-tebal"><code>Menulis Teks Tebal</code></a></li>
+<li><a href="#menulis-teks-miring"><code>Menulis Teks Miring</code></a></li>
+<li><a href="#menulis-teks-coret"><code>Menulis Teks Coret</code></a></li>
+<li><a href="#membuat-daftarlist"><code>Membuat Daftar/List</code></a></li>
+<li><a href="#menambahkan-gambar"><code>Menambahkan Gambar</code></a></li>
+<li><a href="#menambahkan-link"><code>Menambahkan Link</code></a></li>
+<li><a href="#membuat-tabel"><code>Membuat Tabel</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="manfaat"></a><a href="#manfaat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manfaat</h2>
+<ol>
+<li>Kemudahan distribusi karena tidak dalam bentuk dokumen</li>
+<li>Menghemat waktu dan fokus ke dalam konten karena tidak perlu memikirkan format tampilan</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="tools-yang-dibutuhkan"></a><a href="#tools-yang-dibutuhkan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tools yang Dibutuhkan</h2>
+<p>Silahkan dipilih berdasarkan preferensi kalian:</p>
+<ol>
+<li><strong>Editor Teks</strong> (Notepad++ / Visual Code / Sublime Text / dll)</li>
+<li><strong>Editor Diagram</strong> (Alamat: <a href="http://draw.io">http://draw.io</a>)</li>
+<li><strong>Editor Gambar</strong> (Apa saja yang terpenting mendukung penyimpanan gambar dalam format<code>.svg</code>)</li>
+<li><strong>Editor Tabel</strong> (Alamat: <a href="https://tablesgenerator.com/markdown_tables">https://tablesgenerator.com/markdown_tables</a>)</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="struktur-halaman-markdown"></a><a href="#struktur-halaman-markdown" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Struktur Halaman Markdown</h2>
+<blockquote>
+<p>Dibawah ini adalah template awal Markdown, silahkan salin ke dalam <a href="markdown#tools-yang-dibutuhkan">Editor Teks</a> kalian.</p>
+</blockquote>
+<p>Sebagai contoh:</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-1-tab-2" class="nav-link active" data-group="group_1" data-tab="tab-group-1-content-2">Template Awal</div><div id="tab-group-1-tab-3" class="nav-link" data-group="group_1" data-tab="tab-group-1-content-3">Contoh Lain</div></div><div class="tab-content"><div id="tab-group-1-content-2" class="tab-pane active" data-group="group_1" tabindex="-1"><div><span><pre><code class="hljs css language-markdown">---<br />id: cobanulis<br /><span class="hljs-section">title: Panduan Menulis Markdown<br />---</span><br /><span class="hljs-code">`Anda berada di dalam panduan: Markdown`</span><br /><br /><span class="hljs-section">## Header Awal</span><br /><br />Isi paragraf 1<br /><br /><span class="hljs-section">## Header Kedua</span><br /><br />Isi paragraf 2<br /><br /><span class="hljs-section">### Sub Header</span><br /><br />Isi paragraf 3<br /></code></pre>
+</span></div></div><div id="tab-group-1-content-3" class="tab-pane" data-group="group_1" tabindex="-1"><div><span><pre><code class="hljs css language-markdown">---<br />id: cobanulis<br /><span class="hljs-section">title: Spesifikasi<br />---</span><br /><span class="hljs-code">`Anda berada di dalam panduan: PMCS`</span><br /><br />Perhatikan kebutuhan spesifikasi perangkat sebelum melakukan instalasi PMCS.<br /><br /><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../assets/pmcs/undraw_startup_life_2du2.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"spec"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"500"</span>/&gt;</span></span><br /><br /><span class="hljs-section">## Kebutuhan Perangkat Lunak</span><br /><br />Aplikasi berikut wajib sudah terpasang sebelum instalasi:<br /><span class="hljs-bullet">1. </span><span class="hljs-strong">**Visual C++ 2013 Redistributable Package**</span>: program dari Microsoft untuk mendukung aplikasi PMCS, unduh [<span class="hljs-string">disini</span>](<span class="hljs-link">http://e-accounting.wika.co.id/pmcs/files/vcredist.zip</span>) dan install keduanya<br /><span class="hljs-bullet">2. </span><span class="hljs-strong">**Firefox**</span>: <span class="hljs-emphasis">_browser_</span> yang direkomendasi karena kompatibilitas <span class="hljs-emphasis">_plugin_</span> untuk melihat laporan, unduh [<span class="hljs-string">disini</span>](<span class="hljs-link">https://www.mozilla.org/en-US/firefox/all/</span>)<br /><span class="hljs-bullet">3. </span><span class="hljs-strong">**Microsoft Excel**</span>: membantu proses input data, kompatibel dengan PMCS apabila dapat menyimpan dokumen .xls<br /><br />Aplikasi tidak wajib namun membantu proses:<br /><span class="hljs-bullet">- </span><span class="hljs-strong">**Adobe Acrobat Reader DC**</span>: untuk membaca dokumen PDF, unduh [<span class="hljs-string">disini</span>](<span class="hljs-link">https://get.adobe.com/reader/</span>)<br /><br />*[PMCS]: Project Monitoring &amp; Control System<br /></code></pre>
+</span></div></div></div></div>
+<p>Simpan file dengan nama <code>cobanulis.md</code>. Konten contoh ini hanya berlaku untuk 1 halaman, buat file yang berbeda untuk halaman lain.</p>
+<p>Berdasarkan contoh template diatas, beberapa baris awal kita anggap sebagai <strong>pra-konten</strong> yang dipisahkan dengan simbol <code>---</code>. Isinya adalah:</p>
+<pre><code class="hljs css language-markdown">---
+id: cobanulis
+<span class="hljs-section">title: Panduan Menulis Markdown
+---</span>
+<span class="hljs-code">`Anda berada di dalam panduan: Markdown`</span>
+</code></pre>
+<ul>
+<li><code>id</code>: Diisi nama file</li>
+<li><code>title</code>: Judul halaman awal</li>
+</ul>
+<p>Baris selanjutnya dapat kita sebut sebagai <strong>konten</strong>. Isinya:</p>
+<pre><code class="hljs css language-markdown"><span class="hljs-section">## Header Awal</span>
+
+Isi paragraf 1
+
+<span class="hljs-section">## Header Kedua</span>
+
+Isi paragraf 2
+
+<span class="hljs-section">### Sub Header</span>
+
+Isi paragraf 3
+</code></pre>
+<blockquote>
+<p><strong>Konten</strong> tidak perlu diisi sama persis dengan contoh, dapat dikreasikan sesuai keinginan kalian.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="merubah-isi-konten"></a><a href="#merubah-isi-konten" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Merubah Isi Konten</h2>
+<p>Mari kita bedah satu per satu supaya lebih mudah. Simak beberapa contoh berikut ini.</p>
+<h3><a class="anchor" aria-hidden="true" id="menulis-judul-header"></a><a href="#menulis-judul-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Menulis Judul Header</code></h3>
+<pre><code class="hljs css language-markdown"><span class="hljs-section"># Judul Header 1</span>
+<span class="hljs-section">## Judul Header 2</span>
+<span class="hljs-section">### Judul Header 3</span>
+<span class="hljs-section">#### Judul Header 4</span>
+<span class="hljs-section">##### Judul Header 5</span>
+<span class="hljs-section">###### Judul Header 6</span>
+</code></pre>
+<p>Menghasilkan ini:</p>
+<h4><a class="anchor" aria-hidden="true" id="contoh-judul-header-4"></a><a href="#contoh-judul-header-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contoh Judul Header 4</h4>
+<h5><a class="anchor" aria-hidden="true" id="contoh-judul-header-5"></a><a href="#contoh-judul-header-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contoh Judul Header 5</h5>
+<h3><a class="anchor" aria-hidden="true" id="menulis-teks-tebal"></a><a href="#menulis-teks-tebal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Menulis Teks Tebal</code></h3>
+<pre><code class="hljs css language-markdown">Ini hasil cetak <span class="hljs-strong">**Tebal**</span> ya guys.
+</code></pre>
+<p>Menghasilkan ini:</p>
+<p>Ini hasil cetak <strong>Tebal</strong> ya guys.</p>
+<h3><a class="anchor" aria-hidden="true" id="menulis-teks-miring"></a><a href="#menulis-teks-miring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Menulis Teks Miring</code></h3>
+<pre><code class="hljs css language-markdown">Ini hasil cetak <span class="hljs-emphasis">_Miring_</span> ya guys.  
+Kalau ini contoh kombinasi cetak <span class="hljs-strong">**Tebal dan _Miring_*</span>* ya.
+</code></pre>
+<p>Menghasilkan ini:</p>
+<p>Ini hasil cetak <em>Miring</em> ya guys.<br>
+Kalau ini contoh kombinasi cetak <strong>Tebal dan <em>Miring</em></strong> ya.</p>
+<h3><a class="anchor" aria-hidden="true" id="menulis-teks-coret"></a><a href="#menulis-teks-coret" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Menulis Teks Coret</code></h3>
+<pre><code class="hljs css language-markdown">Ini hasil cetak ~~Coret~~ ya guys.
+</code></pre>
+<p>Menghasilkan ini:</p>
+<p>Ini hasil cetak <del>Coret</del> ya guys.</p>
+<h3><a class="anchor" aria-hidden="true" id="membuat-daftarlist"></a><a href="#membuat-daftarlist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Membuat Daftar/List</code></h3>
+<p>Dalam contoh ini, spasi awal dan akhir ditampilkan dengan tanda <code>⋅</code>.</p>
+<pre><code class="hljs css language-markdown"><span class="hljs-bullet">1. </span>Item daftar bernomor pertama
+<span class="hljs-bullet">2. </span>Item lain
+⋅⋅⋅* Sub-daftar tidak bernomor
+<span class="hljs-bullet">1. </span>Angka tidak berurutan tidak masalah, secara otomatis nomor akan diurutkan
+⋅⋅⋅1. Sub-daftar bernomor
+⋅⋅⋅2. Sub-daftar bernomor
+<span class="hljs-bullet">4. </span>Dan item lainnya
+
+⋅⋅⋅Kalian dapat membuat paragraf yang menjorok ke dalam di daftar item. Perhatikan baris kosong di atas, dan spasi di awal kalimat (setidaknya boleh diisi satu spasi saja, tapi saya menggunakan tiga spasi di sini).
+
+⋅⋅⋅Untuk membuat jeda baris tanpa paragraf, dapat menggunakan dua spasi tambahan.⋅⋅
+⋅⋅⋅Perhatikan bahwa baris ini terpisah, tapi masih dalam paragraf yang sama.
+<span class="hljs-bullet">
+* </span>Daftar tidak bernomor dapat menggunakan tanda bintang
+<span class="hljs-bullet">- </span>Atau minus
+<span class="hljs-bullet">+ </span>Atau plus
+</code></pre>
+<p>Menghasilkan ini:</p>
+<ol>
+<li><p>Item daftar bernomor pertama</p></li>
+<li><p>Item lain</p>
+<ul>
+<li>Sub-daftar tidak bernomor</li>
+</ul></li>
+<li><p>Angka tidak berurutan tidak masalah, secara otomatis nomor akan diurutkan</p>
+<ol>
+<li>Sub-daftar bernomor</li>
+<li>Sub-daftar bernomor</li>
+</ol></li>
+<li><p>Dan item lainnya</p>
+<p>Kalian dapat membuat paragraf yang menjorok ke dalam di daftar item. Perhatikan baris kosong di atas, dan spasi di awal kalimat (setidaknya boleh diisi satu spasi saja, tapi saya menggunakan tiga spasi di sini).</p>
+<p>Untuk membuat jeda baris tanpa paragraf, dapat menggunakan dua spasi tambahan.<br>
+Perhatikan bahwa baris ini terpisah, tapi masih dalam paragraf yang sama.</p></li>
+</ol>
+<ul>
+<li>Daftar tidak bernomor dapat menggunakan tanda bintang</li>
+</ul>
+<ul>
+<li>Atau minus</li>
+</ul>
+<ul>
+<li>Atau plus</li>
+</ul>
+<p>Jika kalian ingin mencobanya silahkan salin teks berikut ini:</p>
+<pre><code class="hljs css language-markdown"><span class="hljs-bullet">1. </span>Item daftar bernomor pertama
+<span class="hljs-bullet">2. </span>Item lain
+<span class="hljs-bullet">   * </span>Sub-daftar tidak bernomor
+<span class="hljs-bullet">1. </span>Angka tidak berurutan tidak masalah, secara otomatis nomor akan diurutkan
+<span class="hljs-bullet">   1. </span>Sub-daftar bernomor
+<span class="hljs-bullet">   2. </span>Sub-daftar bernomor
+<span class="hljs-bullet">4. </span>Dan item lainnya
+
+   Kalian dapat membuat paragraf yang menjorok ke dalam di daftar item. Perhatikan baris kosong di atas, dan spasi di awal kalimat (setidaknya boleh diisi satu spasi saja, tapi saya menggunakan tiga spasi di sini).
+
+   Untuk membuat jeda baris tanpa paragraf, dapat menggunakan dua spasi tambahan.  
+   Perhatikan bahwa baris ini terpisah, tapi masih dalam paragraf yang sama.
+<span class="hljs-bullet">
+* </span>Daftar tidak bernomor dapat menggunakan tanda bintang
+<span class="hljs-bullet">- </span>Atau minus
+<span class="hljs-bullet">+ </span>Atau plus
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="menambahkan-gambar"></a><a href="#menambahkan-gambar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Menambahkan Gambar</code></h3>
+<pre><code class="hljs css language-markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/undraw_in_the_office_o44c.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"gbr-ilustrasi-2"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"500"</span>/&gt;</span></span>
+</code></pre>
+<p>Mari pisah menjadi 3 bagian, kalian cukup merubah isi yang diawali dan diakhiri dengan tanda petik <code>&quot;</code>:</p>
+<ul>
+<li><code>src</code>: Diisi nama file gambar setelah <code>assets/</code>  <br>
+(jika kalian punya referensi gambar dari web lain, boleh mencantumkan link utuhnya. contoh: <code>src=&quot;http://faizadi.github.io/wika-guide/docs/assets/undraw_teacher_35j2.svg&quot;</code>)</li>
+<li><code>alt</code>: Alternatif teks yang muncul apabila gambar gagal dimuat oleh browser</li>
+<li><code>width</code>: Ukuran lebar gambar dalam pixel</li>
+</ul>
+<p>Menghasilkan ini:</p>
+<p><img src="assets/undraw_in_the_office_o44c.svg" alt="gbr-ilustrasi-2" width="500"/></p>
+<p>Format gambar disarankan menggunakan <code>.svg</code>. Walaupun format <code>.png</code> dan <code>.jpg</code> juga didukung.</p>
+<h3><a class="anchor" aria-hidden="true" id="menambahkan-link"></a><a href="#menambahkan-link" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Menambahkan Link</code></h3>
+<p>URL atau link yang ditulis secara utuh otomatis menjadi hyperlink.</p>
+<p>Contoh:</p>
+<pre><code class="hljs css language-markdown">Silahkan menuju halaman: http://faizadi.github.io atau faizadi.github.io
+</code></pre>
+<p>Menghasilkan ini:</p>
+<p>Silahkan menuju halaman: <a href="http://faizadi.github.io">http://faizadi.github.io</a> atau <a href="http://faizadi.github.io">faizadi.github.io</a></p>
+<p>Apabila kalian ingin agar URL atau link tidak menampilkan alamat mentah, simak contoh dibawah ini:</p>
+<pre><code class="hljs css language-markdown">Ini adalah [<span class="hljs-string">inline-style link</span>](<span class="hljs-link">http://faizadi.github.io</span>)
+
+Ini adalah [<span class="hljs-string">inline-style link dengan title</span>](<span class="hljs-link">http://faizadi.github.io "Sebuah situs"</span>)
+</code></pre>
+<p>Menghasilkan ini:</p>
+<p>Ini adalah <a href="http://faizadi.github.io">inline-style link</a></p>
+<p>Ini adalah <a href="http://faizadi.github.io" title="Sebuah situs">inline-style link dengan title</a></p>
+<h3><a class="anchor" aria-hidden="true" id="membuat-tabel"></a><a href="#membuat-tabel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Membuat Tabel</code></h3>
+<h4><a class="anchor" aria-hidden="true" id="menambahkan-tabel"></a><a href="#menambahkan-tabel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Menambahkan Tabel</h4>
+<blockquote>
+<p>Kalian dapat menggunakan <a href="markdown#tools-yang-dibutuhkan">Editor Tabel</a> untuk mempermudah pembuatan tabel.</p>
+</blockquote>
+<p><img src="assets/ps_markdown-1.svg" alt="gbr-markdown-1"/></p>
+<p>Langkah-langkah sesuai gambar diatas:</p>
+<ol>
+<li>Pastikan kalian berada pada tab Markdown Tables</li>
+<li>Isi tabel seperti mengisi Excel, lihat warna kuning pada gambar</li>
+<li>Klik tombol <code>Generate</code> untuk menghasilkan output dalam markdown</li>
+<li>Klik tombol <code>Copy to Clipboard</code> untuk menyalin</li>
+<li>Tempel teks tersebut ke dokumen markdown kalian</li>
+</ol>
+<pre><code class="hljs css language-markdown">| No. | Nama | Usia |
+|-----|------|------|
+| 1   | Faiz | 27   |
+| 2   | Adi  | 30   |
+</code></pre>
+<p>Menghasilkan ini:</p>
+<table>
+<thead>
+<tr><th>No.</th><th>Nama</th><th>Usia</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Faiz</td><td>27</td></tr>
+<tr><td>2</td><td>Adi</td><td>30</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="memodifikasi-tabel"></a><a href="#memodifikasi-tabel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Memodifikasi Tabel</h4>
+<ol>
+<li><p>Pada <a href="markdown#tools-yang-dibutuhkan">Editor Tabel</a>, klik tombol <code>File</code>. Pilih <code>Paste table data</code>.</p>
+<p><img src="assets/ps_markdown-2.svg" alt="gbr-markdown-2"/></p></li>
+<li><p><em>Copy</em> dan <em>Paste</em> isi tabel yang ingin kalian ubah pada kolom yang tersedia. Klik tombol <code>Load</code>.</p>
+<p><img src="assets/ps_markdown-3.svg" alt="gbr-markdown-3"/></p></li>
+<li><p>Apabila ingin menambah kolom atau baris, klik kanan pada kepala kolom atau baris.<br>
+Pilih <code>add column ..</code> untuk kolom dan <code>add row ..</code> untuk baris.</p>
+<p><img src="assets/ps_markdown-4.svg" alt="gbr-markdown-4"/></p></li>
+<li><p>Ulangi langkah pengisian <a href="markdown#menambahkan-tabel">berikut ini</a>.</p></li>
+<li><p>Atau... kalian bisa langsung mengedit tabel pada <a href="markdown#tools-yang-dibutuhkan">Editor Teks</a> apabila sudah menguasai bahasa markdown dan tidak perlu mengikuti tutorial ini.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="playground"></a><a href="#playground" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Playground</h2>
+<p>Jika ingin belajar menulis, kalian bisa coba-coba menulis <strong>konten</strong> disini:</p>
+<iframe src="https://markdown-here.com/livedemo.html" width="760" height="1100" scrolling="no"></iframe>
+<h2><a class="anchor" aria-hidden="true" id="selesai"></a><a href="#selesai" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Selesai</h2>
+<p>Jika ingin dibuatkan halaman khusus spesifik untuk aplikasi yang kalian tangani, silahkan buat akun <a href="https://github.com/join?source_repo=faizadi%2Fwika-guide">Github melalui link ini</a>. Kemudian konfirmasi melalui email ke <a href="mailto:faiz@wikamail.id">faiz@wikamail.id</a> dengan menyertakan:</p>
+<pre><code class="hljs css language-markdown">Nama Aplikasi: (Contoh: PMCS)
+
+Jumlah Halaman: (1/2/3/dst)
+Nama File dengan prefix aplikasi: (Contoh pmcs adalah <span class="hljs-code">`pmcs_ininamafile`</span> tanpa spasi)
+Judul Halaman: (Contoh: Panduan Menulis Markdown)
+Username Github-mu: 
+
+NOTE: Apabila jumlah halaman lebih dari satu,  
+<span class="hljs-code">      harap menyertakan Nama File dan Judul Halaman untuk masing-masing halaman.</span>
+</code></pre>
+<p>Setelah itu tunggu balasan email untuk petunjuk selanjutnya. Selamat menulis juklak!</p>
+<blockquote>
+<p>Catatan: Kegiatan mem-<em>publish</em> isi konten ke situs web hanya dilakukan oleh Admin.</p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/15/2020 by faizadi</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#manfaat">Manfaat</a></li><li><a href="#tools-yang-dibutuhkan">Tools yang Dibutuhkan</a></li><li><a href="#struktur-halaman-markdown">Struktur Halaman Markdown</a></li><li><a href="#merubah-isi-konten">Merubah Isi Konten</a><ul class="toc-headings"><li><a href="#menulis-judul-header"><code>Menulis Judul Header</code></a></li><li><a href="#menulis-teks-tebal"><code>Menulis Teks Tebal</code></a></li><li><a href="#menulis-teks-miring"><code>Menulis Teks Miring</code></a></li><li><a href="#menulis-teks-coret"><code>Menulis Teks Coret</code></a></li><li><a href="#membuat-daftarlist"><code>Membuat Daftar/List</code></a></li><li><a href="#menambahkan-gambar"><code>Menambahkan Gambar</code></a></li><li><a href="#menambahkan-link"><code>Menambahkan Link</code></a></li><li><a href="#membuat-tabel"><code>Membuat Tabel</code></a></li></ul></li><li><a href="#playground">Playground</a></li><li><a href="#selesai">Selesai</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/wika-guide/" class="nav-home"><img src="/wika-guide/img/wika_logo_square.png" alt="Juklak User" width="66" height="58"/></a><div><h5>Dokumen</h5><a href="/wika-guide/docs/toc.html">Daftar Konten</a><a href="/wika-guide/docs/policy.html">Kebijakan dan Privasi</a></div><div><h5>Komunitas</h5><a href="/wika-guide/users">Open Source Showcase</a><a href="https://wzone.wika.co.id/" target="_blank" rel="noreferrer noopener">Wika Zone</a></div><div><h5>Lainnya</h5><a href="/wika-guide/blog">Blog</a><a class="github-button" href="https://github.com/faizadi/wika-guide" data-icon="octicon-mark-github" data-count-href="/faizadi/wika-guide/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">wika-guide</a><div class="social"><a href="https://twitter.com/ptwijayakarya" class="twitter-follow-button">Follow @ptwijayakarya</a></div><div class="social"><div class="fb-like" data-href="https://faizadi.github.io" data-colorscheme="dark" data-layout="standard" data-share="true" data-width="225" data-show-faces="false"></div></div></div></section><section class="copyright">Copyright © 2020 WIKA - Departemen Sistem Informasi</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'735549226943374',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '446c126b3a9af0207d75a15ecfe69c45',
+                indexName: 'wika-guide',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
