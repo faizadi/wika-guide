@@ -1,0 +1,45 @@
+{
+  "toc": {
+    "Umum" : [
+      "toc",
+      "policy"
+    ]
+  },
+  "md": {
+    "BSI Playground" : [
+      "markdown"
+    ]
+  },
+  "pmcs-docs": {
+    "Pengantar" : [
+      "pmcs/pmcs_intro",
+      "pmcs/pmcs_poc",
+      "pmcs/pmcs_abbr"
+    ],
+    "Persiapan": [
+      "pmcs/pmcs_spec",
+      "pmcs/pmcs_install",
+      "pmcs/pmcs_crid",
+      "pmcs/pmcs_dtmaster",
+      "pmcs/pmcs_memjo"
+    ],
+    "Proses Input": [
+      {
+        "type": "subcategory",
+        "label": "RAB",
+        "ids": [
+          "pmcs/pmcs_rabrkp",
+          "pmcs/pmcs_harsat",
+          "pmcs/pmcs_boq",
+          "pmcs/pmcs_sbdtahap",
+          "pmcs/pmcs_ravols"
+        ]
+      }
+    ]
+  },
+  "sla-docs": {
+    "Petunjuk" : [
+      "sla/sla_intro"
+    ]
+  }
+}
