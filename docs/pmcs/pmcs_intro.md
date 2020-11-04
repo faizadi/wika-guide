@@ -27,7 +27,7 @@ Pada PMCS terdapat beberapa modul diantaranya, Modul Produksi, Modul Pengadaan &
 
 ## Ketentuan Umum
 
-Pengoperasian PMCS adalah hak eksklusif PT WIJAYA KARYA (Persero) Tbk. yang selanjutnya disebut WIKA selaku pemilik aplikasi, dimana selain pemilik dan atau pihak yang berkepentingan, tidak diperkenankan untuk menggunakan aplikasi PMCS tanpa izin tertulis dari Ketua Tim Implementasi.
+Pengoperasian PMCS adalah hak eksklusif PT WIJAYA KARYA (Persero) Tbk. yang selanjutnya disebut WIKA selaku pemilik aplikasi, dimana selain pemilik dan atau pihak yang berkepentingan, tidak diperkenankan untuk menggunakan aplikasi PMCS.
 
 Dalam pengoperasian PMCS, pengguna wajib disediakan komputer khusus dan tidak boleh digunakan untuk kepentingan lain dan atau dipinjamkan ke pihak lain. Ketika melaksanakan proses penginputan data PMCS, pengguna wajib berpedoman pada Panduan Pengguna serta prosedur yang berlaku.
 

@@ -13,20 +13,26 @@ Perhatikan kebutuhan spesifikasi perangkat sebelum melakukan instalasi PMCS.
 
 Komputer/laptop pengguna diharapkan ber-spesifikasi:
 1. Rekomendasi Sistem Operasi: Windows 10 Pro (64 bit)
-2. Memori penyimpanan minimal tersedia: 500+ MB
+2. Memori penyimpanan minimal tersedia: > 1 GB
 3. RAM minimal: 4 GB (_rekomendasi RAM 8 GB_)
 4. Rekomendasi Disk Storage: **SSD**, karena meningkatkan kecepatan perangkat secara signifikan
-5. Kapasitas bandwith internet minimal: 2 Mbps
+5. Rekomendasi merk laptop: [DELL Inspiron 14" 3000 Series](https://www.dell.com/id/p/laptops/inspiron-laptops) (bersifat opsional, dapat menggunakan merk lain yang memenuhi kriteria diatas)
 
 ## Kebutuhan Perangkat Lunak
 
 Aplikasi berikut wajib sudah terpasang sebelum instalasi:
-1. **Visual C++ 2013 Redistributable Package**: program dari Microsoft untuk mendukung aplikasi PMCS, unduh [disini](http://e-accounting.wika.co.id/pmcs/files/vcredist.zip) dan install keduanya
-2. **Firefox**: _browser_ yang direkomendasi karena kompatibilitas _plugin_ untuk melihat laporan, unduh [disini](https://www.mozilla.org/en-US/firefox/all/)
-3. **Microsoft Excel**: membantu proses input data, kompatibel dengan PMCS apabila dapat menyimpan dokumen .xls
+1. **Visual C++ 2013 Redistributable Package**: program dari Microsoft untuk mendukung aplikasi PMCS, unduh [disini](https://e-accounting.wika.co.id/pmcs/files/vcredist.zip) dan install kedua file tersebut
+2. **Firefox**: _browser_ yang direkomendasi karena kompatibilitas _plugin_ PMCS, unduh [disini](https://www.mozilla.org/en-US/firefox/all/)
+3. **Microsoft Excel**: membantu proses input data, kompatibel dengan PMCS apabila dapat menyimpan dokumen dalam format `.xls`
 
-Aplikasi tidak wajib namun membantu proses:
+Aplikasi opsional:
 - **Adobe Acrobat Reader DC**: untuk membaca dokumen PDF, unduh [disini](https://get.adobe.com/reader/)
+
+## Kebutuhan Jaringan
+
+Persyaratan untuk mengakses aplikasi:
+1. Kapasitas bandwith internet minimal: 2 Mbps
+2. Provider IndiHome tidak direkomendasikan, karena terdapat limitasi
 
 *[PMCS]: Project Monitoring & Control System
 *[MB]: Mega Byte
